@@ -63,12 +63,14 @@ $ yarn add react-native-phone-call
 
 To use the module, call the function with an object containing the number to call as a argument.
 
+Info: This will not work inside an emulator on iOS. If you see an 'The URL is invalid' error, try to run it on a real device.
+
 ```js
 import call from 'react-native-phone-call'
 
 const args = {
   number: '9093900003', // String value with the number to call
-  prompt: false // Optional boolean property. Determines if the user should be prompt prior to the call 
+  prompt: false // (iOS Only) Optional boolean property. Determines if the user should be prompt prior to the call 
 }
 
 call(args).catch(console.error)
